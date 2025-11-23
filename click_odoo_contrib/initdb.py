@@ -469,26 +469,22 @@ class DbCache:
 )
 @click.option(
     "--language",
-    "-l",
     default=None,
     help="Default language for the database (e.g., en_US, fr_FR).",
 )
 @click.option(
     "--country",
-    "-c",
     default=None,
     help="Country code to set on the main company (e.g., US, FR, BE).",
 )
 @click.option(
     "--username",
-    "-u",
     default="admin",
     show_default=True,
     help="Admin username for the database.",
 )
 @click.option(
     "--password",
-    "-p",
     default="admin",
     show_default=True,
     help="Admin password for the database.",
