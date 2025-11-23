@@ -75,9 +75,9 @@ def odoo_createdb(
 ):
     with _patch_ir_attachment_store(force_db_storage):
         if not exists:
-            odoo.service.db._create_empty_database(dbname)
             if language:
                 odoo.tools.config["load_language"] = language
+            odoo.service.db._create_empty_database(dbname)
         if odoo.release.version_info >= (19, 0):
             odoo.tools.config["with_demo"] = demo
             registry = odoo.modules.registry.Registry.new(
