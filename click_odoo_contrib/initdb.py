@@ -108,10 +108,12 @@ def odoo_createdb(
                     [("code", "ilike", country)], limit=1
                 )
                 if chosen_country:
-                    env["res.company"].browse(1).write({
-                        "country_id": chosen_country.id,
-                        "currency_id": chosen_country.currency_id.id,
-                    })
+                    env["res.company"].browse(1).write(
+                        {
+                            "country_id": chosen_country.id,
+                            "currency_id": chosen_country.currency_id.id,
+                        }
+                    )
                     timezones = country_timezones.get(country, [])
                     if len(timezones) == 1:
                         env["res.users"].search([]).write({"tz": timezones[0]})
