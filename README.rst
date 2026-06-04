@@ -84,7 +84,7 @@ click-odoo-initdb (stable)
     By default, if the database already exists, the script will fail. With
     --unless-exists, the script succeeds but does nothing when the database
     exists. With --unless-initialized, the script succeeds but does nothing when
-    the database exists and is already initialized, otherwise it initizalizes
+    the database exists and is already initialized, otherwise it initializes
     Odoo in the existing database.
 
   Options:
